@@ -54,23 +54,27 @@ int main() {
     
     // delete entire lsit 
     deleteList(head);
-    cout 
-
-   
-
+    cout << "\nAfter deleting entire list:\n";
+    output(head);
+    
     return 0;
 }
 
-void output(Node * hd) {
-    if (!hd) {
-        cout << "EEmpty list.\n";
-        return;
+// function definfition
+void addToFront(Node* &head, float val){
+    Node* newNode = new Node{val, head};
+    head = newNode;
+}
+
+void addToTail(Node* &head, float val){
+    Node* newNode = new Node{val, nullptr};
+    if (!head){
+        head = newNode;
+    } else {
+        Node* current = head;
+        while (current->next){
+            current = current->next;
+        }
+        current->next = newNode;
     }
-    int count = 1;
-    Node * current = hd;
-    while (current) {
-        cout << "[" << count++ << "] " << current->value << endl;
-        current = current->next;
-    }
-    cout << endl;
 }
