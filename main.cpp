@@ -1,5 +1,7 @@
-#include <iostream>   // COMSC-210 | Lab 15 | Mansoor Noori
-using namespace std;  // IDE Visual Studio
+#include <iostream>   //              COMSC-210 | Lab 15 | Mansoor Noori
+#include <cstdlib>    // for rand IDE Visual Studio 
+
+using namespace std;  
 
 const int SIZE = 7;  
 
@@ -7,6 +9,13 @@ struct Node {
     float value;
     Node *next;
 };
+
+// function prototype 
+void addToFront(Node* &head, float val);
+void addToTail(Node* &head, float val);
+void deleteNode(Node* &head, int position);
+void insertAfter(Node* &head, int position, float val);
+
 
 void output(Node *);
 
