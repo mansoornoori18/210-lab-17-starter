@@ -97,12 +97,26 @@ void deleteNode(Node* &head, int Position){
         delete temp;
     }
 }
-void insertAfter(Node* &head, int Position, float cal){
+void insertAfter(Node* &head, int Position, float val){
     if (Position< 1)return;
 
     Node* current = head;
     for (int i = 1; current && i < Position; i++){
         current = current->next;
     }
-    
+
+    if (current) {
+        Node* newNode = new Node{val, current->next};
+        current->next = newNode;
+    }
 }
+void deleteList(Node* &head){
+    Node* current = head;
+    while (current){
+        Node* next = current->next;
+        delete current;
+        current = next;
+    }
+    head = nullptr;
+}
+
