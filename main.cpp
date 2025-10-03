@@ -35,7 +35,27 @@ int main() {
     // delete a node 
     cout << "which node to delete? \n";
     output(head);
+    int delPosition;
+    cout << "Choice ---> ";
+    cin >> delPosition;
+    deleteNode(head, delPosition);
+    cout << "\nList after deletation:\n";
+    output(head);
+
+    //insert a Node 
+    cout << "After which node to insert 10000? \n";
+    output(head);
+    int insPosition;
+    cout << "Choice ---> ";
+    cin >> insPosition;
+    insertAfter(head, insPosition, 10000);
+    cout << "\nList after insertion:\n";
+    output(head);
     
+    // delete entire lsit 
+    deleteList(head);
+    cout 
+
    
 
     return 0;
