@@ -101,7 +101,7 @@ int main() {
 
 void output(Node * hd) {
     if (!hd) {
-        cout << "Empty list.\n";
+        cout << "EEmpty list.\n";
         return;
     }
     int count = 1;
