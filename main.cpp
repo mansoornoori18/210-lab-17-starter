@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+#include <iostream>   // COMSC-210 | Lab 15 | Mansoor Noori
+using namespace std;  // IDE Visual Studio
 
 const int SIZE = 7;  
 
