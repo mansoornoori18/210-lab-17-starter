@@ -15,20 +15,19 @@ void addToFront(Node* &head, float val);
 void addToTail(Node* &head, float val);
 void deleteNode(Node* &head, int position);
 void insertAfter(Node* &head, int position, float val);
+void deleteList(Node* &head);
+void output(Node* head);
 
-
-void output(Node *);
 
 int main() {
-    Node *head = nullptr;
-    int count = 0;
+    srand(time(0));               // seed random generator 
 
-    // create a linked list of size SIZE with random numbers 0-99
+    Node *head = nullptr;
+
+    // size random eleamnt to front 
     for (int i = 0; i < SIZE; i++) {
-        int tmp_val = rand() % 100;
-        Node *newVal = new Node;
-        
-        // adds node at head
+        float val = rand() % 100;
+        addToFront(head, val);}    // adds node at head
         if (!head) { // if this is the first node, it's the new head
             head = newVal;
             newVal->next = nullptr;
