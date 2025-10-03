@@ -61,11 +61,14 @@ int main() {
 }
 
 // function definfition
+
+// Adds a new node at the front of the list
 void addToFront(Node* &head, float val){
     Node* newNode = new Node{val, head};
     head = newNode;
 }
 
+// Adds a new node at the end (tail) of the list
 void addToTail(Node* &head, float val){
     Node* newNode = new Node{val, nullptr};
     if (!head){
@@ -78,6 +81,8 @@ void addToTail(Node* &head, float val){
         current->next = newNode;
     }
 }
+
+// Deletes node at the given position
 void deleteNode(Node* &head, int Position){
     if (!head || Position < 1) return;
 
@@ -97,6 +102,8 @@ void deleteNode(Node* &head, int Position){
         delete temp;
     }
 }
+
+// Inserts a node with value after the given position
 void insertAfter(Node* &head, int Position, float val){
     if (Position< 1)return;
 
@@ -110,6 +117,8 @@ void insertAfter(Node* &head, int Position, float val){
         current->next = newNode;
     }
 }
+
+// Deletes the entire linked list
 void deleteList(Node* &head){
     Node* current = head;
     while (current){
@@ -119,6 +128,8 @@ void deleteList(Node* &head){
     }
     head = nullptr;
 }
+
+// Displays the list contents with position numbers
 void output(Node* head){
     if (!head){
         cout << "Empty list. \n";
