@@ -78,3 +78,31 @@ void addToTail(Node* &head, float val){
         current->next = newNode;
     }
 }
+void deleteNode(Node* &head, int Position){
+    if (!head || Position < 1) return;
+
+    if (Position == 1){
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        return;
+    }
+    Node* current = head;
+    for (int i = 1; current && i < Position - 1; ++i){
+        current = current->next;
+    }
+    if (current && current->next){
+        Node*temp = current->next;
+        current->next = temp->next;
+        delete temp;
+    }
+}
+void insertAfter(Node* &head, int Position, float cal){
+    if (Position< 1)return;
+
+    Node* current = head;
+    for (int i = 1; current && i < Position; i++){
+        current = current->next;
+    }
+    
+}
